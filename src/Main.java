@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -65,14 +67,15 @@ public class Main {
         installWhichVersion (clientOS, clientDeviceYear);
     }
     public static void installWhichVersion(int oS, int year) {
+        int currentYear = LocalDate.now().getYear();
         if (oS == 0) {
-            if (year >= 2015) {
+            if (year >= currentYear) {
                 System.out.println("Установите версию приложения для iOS по ссылке");
             } else {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             }
         } else {
-            if  (year >= 2015) {
+            if  (year >= currentYear) {
                 System.out.println("Установите версию приложения для Android по ссылке");
             } else  {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
